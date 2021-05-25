@@ -1,0 +1,51 @@
+﻿
+@page "{id:int}"
+@model NewsPortal.Pages.EditNewsModel
+@{
+}
+
+
+
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+<script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+
+
+
+<div class="container">
+    <h3>Edit News</h3>
+    <hr />
+    <br />
+    <form method="post">
+        <input asp-for="news.NewsID" type="hidden" />
+        <div class="row">
+            <div class="col-md-4">
+                <label asp-for="news.HLine"></label>
+                <input asp-for="news.HLine" class="form-control" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <label asp-for="news.NDetails"></label>
+                <input asp-for="news.NDetails" class="form-control" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <label asp-for="news.NCity"></label>
+                <input asp-for="news.NCity" class="form-control" />
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <label asp-for="news.NDate"></label>
+                <input asp-for="news.NDate" cl class="form-control" />
+            </div>
+        </div>
+
+        <br />
+        <input type="submit" value="Save" class="btn btn-primary" />
+        <a class="btn btn-default" href="/allNews">Cancel</a>
+    </form>
+</div>  
